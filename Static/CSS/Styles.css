@@ -6,12 +6,15 @@
 
 body {
     font-family: Arial, sans-serif;
+    background-color: #656262; 
+    min-height: 100vh;
 }
 
 header {
     background-color: #3a3a3a;
     padding: 15px 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border: bottom 4px solid #3a3a3a;
 }
 
 .header-container {
@@ -27,6 +30,7 @@ header {
     size: 20px;
     color: beige;
     display: flex;
+    align-items: center;
     justify-content: left;
 }
 
@@ -50,4 +54,68 @@ nav a {
 
 nav a:hover {
     color: #ccc;
+}
+
+.auro-intro{
+    background-color: #1f1a1acc;
+    padding: 40px 20px;
+    text-align: center;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.auro-intro-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.auro-intro-logo{
+    font-size: 120px;
+    color: white;
+    margin: 0;
+    font-weight: bold;
+
+}
+
+.auro-intro-title {
+    font-size: 20px;
+    color: white;
+    margin: 0;
+    font-weight: bold;
+}
+
+.auro-intro-text {
+    font-size: 13px;
+    color: white;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .auro-intro-logo {
+        font-size: 80px;
+    }
+
+    .auro-intro-title {
+        font-size: 16px;
+    }
+
+    .auro-intro-text {
+        font-size: 12px;
+    }
 }
