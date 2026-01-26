@@ -24,10 +24,15 @@ header {
 }
 
 .logo {
-    font-size: 32px;
-    font-weight: bold;
+    size: 20px;
     color: beige;
-    width: 50px;
+    display: flex;
+    justify-content: left;
+}
+
+.image-small {
+    width: 70px;
+    height: auto;
 }
 
 nav {
