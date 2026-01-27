@@ -56,6 +56,9 @@ nav a:hover {
     color: #ccc;
 }
 
+main{
+    padding:10px;
+}
 .auro-intro{
     background-color: #1f1a1acc;
     padding: 80px 20px;
@@ -118,6 +121,21 @@ nav a:hover {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
+footer{
+    background-color: #3a3a3a;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border: bottom 4px solid #3a3a3a;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
 @media (max-width: 768px) {
     .header-container {
