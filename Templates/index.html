@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Auro</title>
-    <link rel="stylesheet" href="../Static/CSS/Styles.css">
-    <link rel="icon" type="image/png" sizes="32x32" href="../Static/Assets/Auro_Logo.png">
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/Styles.css') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='Assets/Auro_Logo.png')}}">
 </head>
 <body>
     <header>
         <div class="header-container">
         <div class="logo">
-            <img src="../Static/Assets/Auro_Logo.png" class="image-small">
+            <img src="{{ url_for('static', filename='Assets/Auro_Logo.png')}}" class="image-small">
         </div>
         <nav>
-            <a href="../Templates/index.html">Home</a>
-            <a href="../Templates/Catalog.html">Catalog</a>
-            <a href="../Templates/About_Us.html">About Us</a>
+            <a href="{{ url_for('index')}}">Home</a>
+            <a href="{{ url_for('catalog')}}">Catalog</a>
+            <a href="{{ url_for('about_us')}}">About Us</a>
         </nav>
         </div>
     </header>
