@@ -21,8 +21,29 @@
         </div>
     </header>
 
-    <main>
-        <p>This is catalog</p>
+    <main class="catalog-main">
+        <div class="catalog">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="{{ url_for('static', filename='Assets/Auro_Shirt_Black.png')}}">
+                </div>
+                <div class="product-info">
+                    <h3 class="name">Black T-Shirt</h3>
+                    <p class="price">Rp. 253.000</p>
+                    <button>Add to cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="{{ url_for('static', filename='Assets/Auro_Shirt_White.png')}}">
+                </div>
+                <div class="product-info">
+                    <h3 class="name">White T-Shirt</h3>
+                    <p class="price">Rp. 253.000</p>
+                    <button>Add to cart</button>
+                </div>
+            </div>
+        </div>
     </main>
 </body>
 </html>
