@@ -163,6 +163,32 @@ main{
     font-weight: 600;
 }
 
+.product-link{
+    text-decoration: none;
+    color: inherit;
+}
+
+.product-page{
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 40px;
+}
+
+.product-page img{
+    width: 500px;
+    border-radius: 8px;
+}
+
+.page-info {
+    font-size: 32px;
+    margin: 0;
+}
+
+.buy-button{
+    size: 30px;
+}
+
 footer{
     background-color: #3a3a3a;
     padding: 10px 0;
