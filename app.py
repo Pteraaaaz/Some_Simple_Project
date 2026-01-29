@@ -21,6 +21,18 @@ products = {
         "price": 253000,
         "image": "Assets/Auro_Shirt_Orange.png",
         "description": "Bright orange cotton t-shirt"
+    },
+    "orange-shirt1":{
+        "name": "Orange T-Shirt",
+        "price": 253000,
+        "image": "Assets/Auro_Shirt_Orange.png",
+        "description": "Bright orange cotton t-shirt"
+    },
+    "orange-shirt2":{
+        "name": "Orange T-Shirt",
+        "price": 253000,
+        "image": "Assets/Auro_Shirt_Orange.png",
+        "description": "Bright orange cotton t-shirt"
     }
 }
 

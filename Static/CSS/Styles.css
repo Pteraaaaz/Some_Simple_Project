@@ -14,7 +14,7 @@ header {
     background-color: #3a3a3a;
     padding: 15px 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    border: bottom 4px solid #3a3a3a;
+    border-bottom: 4px solid #3a3a3a;
 }
 
 .header-container {
@@ -27,7 +27,6 @@ header {
 }
 
 .logo {
-    size: 20px;
     color: beige;
     display: flex;
     align-items: center;
@@ -37,6 +36,15 @@ header {
 .image-small {
     width: 70px;
     height: auto;
+}
+
+.menu-toggle{
+    display:none;
+    background:none;
+    border:none;
+    font-size:26px;
+    color:white;
+    cursor: pointer;
 }
 
 nav {
@@ -123,9 +131,12 @@ main{
 
 .catalog{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 16px;
     padding: 20px;
+
+    max-width: 1200px;
+    margin: auto;
 }
 
 .product-card {
@@ -207,14 +218,27 @@ footer{
 
 @media (max-width: 768px) {
     .header-container {
-        flex-direction: column;
+        flex-direction: wrap;
         gap: 20px;
     }
 
+    .menu-toggle{
+        display:block;
+    }
     nav {
-        flex-direction: column;
+        /* flex-direction: column;
         gap: 10px;
-        text-align: center;
+        text-align: center; */
+        
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap:16px;
+        margin-top: 16px;
+    }
+
+    nav.active{
+        display:flex;
     }
 
     .auro-intro-logo {

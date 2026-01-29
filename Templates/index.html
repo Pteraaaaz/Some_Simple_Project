@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Auro</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='CSS/Styles.css') }}">
+    <script src="{{ url_for('static', filename='Js/scripts.js')}}"></script>
     <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='Assets/Auro_Logo.png')}}">
 </head>
 <body>
@@ -13,7 +14,10 @@
         <div class="logo">
             <img src="{{ url_for('static', filename='Assets/Auro_Logo.png')}}" class="image-small">
         </div>
-        <nav>
+
+        <button class="menu-toggle">☰</button>
+
+        <nav class="nav-links">
             <a href="{{ url_for('index')}}">Home</a>
             <a href="{{ url_for('catalog')}}">Catalog</a>
             <a href="{{ url_for('about_us')}}">About Us</a>
