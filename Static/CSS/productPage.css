@@ -84,6 +84,29 @@ main {
     border-radius: 8px;
 }
 
+.sizes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 30px;
+}
+    
+.sizes button {
+    padding: 12px 0;
+    border: 1px solid #000;
+    background: #fff;
+    cursor: pointer;
+    font-weight: 600;
+}
+    
+.sizes button:hover{
+    background-color: red;
+}
+
+.sizes button:focus {
+    background-color: red;
+}
+
 @media (max-width: 768px) {
     .header-container {
         flex-direction: wrap;
@@ -122,6 +145,8 @@ main {
         width: 150px;
         height: 120px;
     }
+
+
 }
 
 @media (max-width: 1024px) {
