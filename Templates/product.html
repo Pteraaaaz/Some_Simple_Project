@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='CSS/productPage.css') }}">
-    <script src="{{ url_for('static', filename='Js/scripts.js')}}"></script>
     <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='Assets/Auro_Logo.png')}}">
 </head>
 <body>
@@ -24,22 +23,6 @@
             </nav>
         </div>
     </header>
-
-    <!-- <main class="product-page">
-        <div class="product-card">
-            <div class="product-image">
-                <img src="{{ url_for('static', filename=product.image)}}">
-            </div>
-        </div>
-        <div class="page-info">
-            <h1>{{ product.name }}</h1>
-            <p>{{ product.price }}</p>
-            <button class="buy-button">Buy</button>
-        </div>
-        <div>
-            <h1>Description</h1>
-        </div>
-    </main> -->
     
     <main>
         <div class="product-page">
@@ -56,11 +39,20 @@
                     <div class="sizes">
                         <button>XS</button>
                         <button>S</button>
-                        <button class="active">M</button>
+                        <button>M</button>
                         <button>L</button>
                     </div>
+                    
                 
-                    <button class="buy-button">Buy</button>
+                    <div class="buy-section">
+                        <div class="counter">
+                            <button id="minus">-</button>
+                            <span id="count">0</span>
+                            <button id="plus">+</button>
+                        </div>
+
+                        <button class="buy-btn">Buy</button>
+                    </div>
                 </div>
             </div>
 
@@ -70,5 +62,7 @@
             </div>
         </div>
     </main>
+
+    <script src="{{ url_for('static', filename='Js/scripts.js')}}"></script>
 </body>
 </html>

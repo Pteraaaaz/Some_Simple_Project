@@ -107,6 +107,18 @@ main {
     background-color: red;
 }
 
+.buy-section{
+    display: flex;
+}
+
+.counter{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 15px;
+}
+
+
 @media (max-width: 768px) {
     .header-container {
         flex-direction: wrap;
