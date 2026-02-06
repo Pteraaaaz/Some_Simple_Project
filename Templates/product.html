@@ -44,18 +44,21 @@
                         <button>L</button>
                     </div>
                     
-                
-                    <div class="buy-section">
-                        <div class="counter">
-                            <button id="minus">-</button>
-                            <span id="count">0</span>
-                            <button id="plus">+</button>
-                        </div>
-                        <a href="{{ url_for('buy_page', product_id=product_id) }}">
-                            <button class="buy-btn">Buy</button>
-                        </a>
+                    <from method="POST" action="{{ url_for('buy_page', product_id=product_id) }}">
+                        <div class="buy-section">
+                            <div class="counter">
+                                <button id="minus">-</button>
+                                <span id="count">0</span>
+                                <button id="plus">+</button>
+                            </div>
 
-                    </div>
+                            <input type="hidden" name="quantity" id="quantity" value="0">
+
+                            <a href="{{ url_for('buy_page', product_id=product_id) }}">
+                                <button type="submit" class="buy-btn">Buy</button>
+                            </a>
+                        </div>
+                    </from>
                 </div>
             </div>
 

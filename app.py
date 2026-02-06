@@ -1,4 +1,5 @@
 from flask import Flask, render_template, url_for
+from flask import request
 
 app = Flask(__name__)
 
@@ -59,14 +60,20 @@ def product_page(product_id):
                            product=product,
                            product_id = product_id)
 
-@app.route('/buy_page/<product_id>')
+@app.route('/buy_page/<product_id>', methods=["GET", "POST"])
 def buy_page(product_id):    
     product = products.get(product_id)
 
     if not product:
         return "Not Found", 404
     
+    if request.method == "POST":
+        quantity = int(request.form["quantity"])
+        print(product_id)
+        print(quantity)
+
     return render_template('Buy_Page.html', product=product)
+
 
 if __name__ == "__main__":
     app.run(debug=True)
