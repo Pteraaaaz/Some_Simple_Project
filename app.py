@@ -55,7 +55,18 @@ def product_page(product_id):
     if not product_page:
         return "Not Found", 404
     
-    return render_template("product.html", product=product)
+    return render_template("product.html", 
+                           product=product,
+                           product_id = product_id)
+
+@app.route('/buy_page/<product_id>')
+def buy_page(product_id):    
+    product = products.get(product_id)
+
+    if not product:
+        return "Not Found", 404
+    
+    return render_template('Buy_Page.html', product=product)
 
 if __name__ == "__main__":
     app.run(debug=True)

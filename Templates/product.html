@@ -32,10 +32,11 @@
                 </div>
 
                 <div class="product-info">
+                    <p>{{ url_for('buy_page', product_id=product_id) }}</p>
                     <h1>{{ product.name }}</h1>
-                    <p>Rp. {{ product.price }}</p>
+                    <h3>Rp. {{ product.price }}</h3>
                 
-                    <label>Size</label>
+                    <label class="size-label">Size</label>
                     <div class="sizes">
                         <button>XS</button>
                         <button>S</button>
@@ -50,8 +51,10 @@
                             <span id="count">0</span>
                             <button id="plus">+</button>
                         </div>
+                        <a href="{{ url_for('buy_page', product_id=product_id) }}">
+                            <button class="buy-btn">Buy</button>
+                        </a>
 
-                        <button class="buy-btn">Buy</button>
                     </div>
                 </div>
             </div>

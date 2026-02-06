@@ -84,6 +84,15 @@ main {
     border-radius: 8px;
 }
 
+.product-info{
+    color: white;
+}
+
+.size-label{
+    font-size: 20px;
+    font-weight: 600;
+}
+
 .sizes {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -108,16 +117,41 @@ main {
 }
 
 .buy-section{
-    display: flex;
+    display: flexbox;
 }
 
 .counter{
-    display: flex;
+    background-color: #fff;
+    display: inline-flex;
     align-items: center;
-    padding: 10px;
+    padding: 14px 30px;
+    border-radius: 9999px;
     gap: 15px;
 }
 
+.counter span{
+    color: black;
+    gap: 10px;
+}
+
+.counter button{
+    background-color: white;
+    border: none;
+}
+
+.buy-btn{
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 32px;
+    background-color: white;
+
+    border-radius: 9999px;
+}
+
+.buy-btn:hover{
+    background-color: #aaa6a6;
+}
 
 @media (max-width: 768px) {
     .header-container {

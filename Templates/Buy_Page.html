@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,15 +8,16 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='CSS/Styles.css') }}">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='Assets/Auro_Logo.png')}}">
 </head>
+
 <body>
     <header>
         <div class="header-container">
             <div class="logo">
                 <img src="{{ url_for('static', filename='Assets/Auro_Logo.png')}}" class="image-small">
             </div>
-    
+
             <button class="menu-toggle">☰</button>
-    
+
             <nav class="nav-links">
                 <a href="{{ url_for('index')}}">Home</a>
                 <a href="{{ url_for('catalog')}}">Catalog</a>
@@ -24,24 +26,10 @@
         </div>
     </header>
 
-    <main class="catalog-main">
-        <div class="catalog">
-            {% for id, product in products.items() %}
-            <a href="{{ url_for('product_page', product_id=id) }}" class="product-link">
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="{{ url_for('static', filename=product.image)}}">
-                    </div>
-                    <div class="product-info">
-                        <h3 class="name">{{product.name}}</h3>
-                        <p class="price">Rp. {{product.price}}</p>
-                    </div>
-                </div>
-            </a>
-            {% endfor %}
-        </div>
+    <main>
+        <p>This is buy page</p>
+        <h1>{{ product.name }}</h1>
     </main>
-
-    <script src="{{ url_for('static', filename='Js/scripts.js')}}"></script>
+    <script src="{{url_for('static', filename='Js/scripts.js')}}"></script>
 </body>
 </html>
