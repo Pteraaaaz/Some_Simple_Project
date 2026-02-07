@@ -13,7 +13,10 @@
             <div class="logo">
                 <img src="{{ url_for('static', filename='Assets/Auro_Logo.png')}}" class="image-small">
             </div>
-            <nav>
+    
+            <button class="menu-toggle">☰</button>
+    
+            <nav class="nav-links">
                 <a href="{{ url_for('index')}}">Home</a>
                 <a href="{{ url_for('catalog')}}">Catalog</a>
                 <a href="{{ url_for('about_us')}}">About Us</a>
@@ -21,6 +24,7 @@
         </div>
     </header>
 
+<<<<<<< HEAD
     <main>
         <section class="featured-section">
             <div class="featured-contianer">
@@ -59,6 +63,26 @@
             </div>
 
         </section>
+=======
+    <main class="catalog-main">
+        <div class="catalog">
+            {% for id, product in products.items() %}
+            <a href="{{ url_for('product_page', product_id=id) }}" class="product-link">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="{{ url_for('static', filename=product.image)}}">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="name">{{product.name}}</h3>
+                        <p class="price">Rp. {{product.price}}</p>
+                    </div>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+>>>>>>> 90b3ee3451e471c0787a37f55d0df489dbf1b2ab
     </main>
+
+    <script src="{{ url_for('static', filename='Js/scripts.js')}}"></script>
 </body>
 </html>
