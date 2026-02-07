@@ -14,7 +14,7 @@ header {
     background-color: #3a3a3a;
     padding: 15px 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    border: bottom 4px solid #3a3a3a;
+    border-bottom: 4px solid #3a3a3a;
 }
 
 .header-container {
@@ -27,7 +27,6 @@ header {
 }
 
 .logo {
-    size: 20px;
     color: beige;
     display: flex;
     align-items: center;
@@ -37,6 +36,15 @@ header {
 .image-small {
     width: 70px;
     height: auto;
+}
+
+.menu-toggle{
+    display:none;
+    background:none;
+    border:none;
+    font-size:26px;
+    color:white;
+    cursor: pointer;
 }
 
 nav {
@@ -54,6 +62,10 @@ nav a {
 
 nav a:hover {
     color: #ccc;
+}
+
+main{
+    padding:10px;
 }
 
 .auro-intro{
@@ -118,17 +130,138 @@ nav a:hover {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
+.catalog{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+    padding: 20px;
+
+    max-width: 1200px;
+    margin: auto;
+}
+
+.product-card {
+    background: white;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.product-image{
+    width: 100%;
+    aspect-ratio: 1;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-info{
+    padding: 16px;
+}
+
+.price{
+    font-weight: bold;
+    font-size: 14px;
+    margin: 0 0 8px;
+}
+
+.name{
+    font-weight: 600;
+}
+
+.product-link{
+    text-decoration: none;
+    color: inherit;
+}
+
+.product-page{
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 40px;
+}
+
+.product-page img{
+    width: 500px;
+    border-radius: 8px;
+}
+
+.page-info {
+    font-size: 32px;
+    margin: 0;
+}
+
+.buy-button{
+    size: 30px;
+}
+
+footer{
+    background-color: #3a3a3a;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border: bottom 4px solid #3a3a3a;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.About-Us-Block{
+   
+    padding: 60px 60px;
+    margin-bottom: 50px;
+    text-align: center;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(73, 62, 62, 0.272)),
+    url(Static\Assets\Screenshot);
+    background-size: cover;
+    background-position: center;
+}
+
+.Block-Content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
 
 @media (max-width: 768px) {
     .header-container {
-        flex-direction: column;
+        flex-direction: wrap;
         gap: 20px;
     }
 
+    .menu-toggle{
+        display:block;
+    }
     nav {
-        flex-direction: column;
+        /* flex-direction: column;
         gap: 10px;
-        text-align: center;
+        text-align: center; */
+        
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap:16px;
+        margin-top: 16px;
+    }
+
+    nav.active{
+        display:flex;
     }
 
     .auro-intro-logo {
@@ -145,6 +278,18 @@ nav a:hover {
     .rectangle-image {
         width: 150px;
         height: 120px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 

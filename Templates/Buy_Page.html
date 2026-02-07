@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
+    <title>Catalog</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='CSS/Styles.css') }}">
-    <script src="{{ url_for('static', filename='Js/scripts.js')}}"></script>
     <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='Assets/Auro_Logo.png')}}">
 </head>
+
 <body>
     <header>
         <div class="header-container">
             <div class="logo">
                 <img src="{{ url_for('static', filename='Assets/Auro_Logo.png')}}" class="image-small">
             </div>
-    
+
             <button class="menu-toggle">☰</button>
-    
+
             <nav class="nav-links">
                 <a href="{{ url_for('index')}}">Home</a>
                 <a href="{{ url_for('catalog')}}">Catalog</a>
@@ -26,12 +27,10 @@
     </header>
 
     <main>
-        <section class="About-Us-Block">
-            <div class="Block-Content">
-                <img src="{{ url_for('static', filename='Assets/Auro_Logo.png')}}" alt="auro-intro-logo" class="auro-intro-logo-img">
-                <h2></h2>
-            </div>
-        </section>
+        <p>{{ quantity }}</p>
+        <p>This is buy page</p>
+        <h1>{{ product.name }}</h1>
     </main>
+    <script src="{{url_for('static', filename='Js/scripts.js')}}"></script>
 </body>
 </html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/productPage.css') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='Assets/Auro_Logo.png')}}">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='Assets/Auro_Logo.png')}}" class="image-small">
+            </div>
+    
+            <button class="menu-toggle">☰</button>
+    
+            <nav class="nav-links">
+                <a href="{{ url_for('index')}}">Home</a>
+                <a href="{{ url_for('catalog')}}">Catalog</a>
+                <a href="{{ url_for('about_us')}}">About Us</a>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <div class="product-page">
+            <div class="product-top">
+                <div class="product-image">
+                    <img src="{{ url_for('static', filename=product.image)}}">
+                </div>
+
+                <div class="product-info">
+                    <p>{{ url_for('buy_page', product_id=product_id) }}</p>
+                    <h1>{{ product.name }}</h1>
+                    <h3>Rp. {{ product.price }}</h3>
+                
+                    <label class="size-label">Size</label>
+                    <div class="sizes">
+                        <button>XS</button>
+                        <button>S</button>
+                        <button>M</button>
+                        <button>L</button>
+                    </div>
+                    
+                    <from method="POST" action="{{ url_for('buy_page', product_id=product_id) }}">
+                        <div class="buy-section">
+                            <div class="counter">
+                                <button id="minus">-</button>
+                                <span id="count">0</span>
+                                <button id="plus">+</button>
+                            </div>
+
+                            <input type="hidden" name="quantity" id="quantity" value="0">
+
+                            <a href="{{ url_for('buy_page', product_id=product_id) }}">
+                                <button type="submit" class="buy-btn">Buy</button>
+                            </a>
+                        </div>
+                    </from>
+                </div>
+            </div>
+
+            <div class="product-description">
+                <h2>Description</h2>
+                <p>{{ product.description }}</p>
+            </div>
+        </div>
+    </main>
+
+    <script src="{{ url_for('static', filename='Js/scripts.js')}}"></script>
+</body>
+</html>

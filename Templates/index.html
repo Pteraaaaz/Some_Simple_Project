@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Auro</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='CSS/Styles.css') }}">
+    <script src="{{ url_for('static', filename='Js/scripts.js')}}"></script>
     <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='Assets/Auro_Logo.png')}}">
 </head>
 <body>
@@ -13,7 +14,10 @@
         <div class="logo">
             <img src="{{ url_for('static', filename='Assets/Auro_Logo.png')}}" class="image-small">
         </div>
-        <nav>
+
+        <button class="menu-toggle">☰</button>
+
+        <nav class="nav-links">
             <a href="{{ url_for('index')}}">Home</a>
             <a href="{{ url_for('catalog')}}">Catalog</a>
             <a href="{{ url_for('about_us')}}">About Us</a>
@@ -22,7 +26,7 @@
     </header>
     <section class = "auro-intro">
         <div class="auro-intro-content">
-            <img src="C:\Users\nicho\Documents\GitHub\Some_Simple_Project\Static\Assets\Auro_Logo.png" alt="auro-intro-logo" class="auro-intro-logo-img">
+            <img src="{{ url_for('static', filename='Assets/Auro_Logo.png')}}" alt="auro-intro-logo" class="auro-intro-logo-img">
             <h2 class="auro-intro-title">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis aliquam accusamus, enim dolorum perferendis eaque libero nemo sapiente placeat eius nam, minima dignissimos atque? In totam id harum velit architecto.</h2>
             <p class="auro-intro-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt, perferendis? Enim id, eaque quam perspiciatis incidunt sint, neque ipsum facilis ea eius eligendi officia nihil quas, sapiente non laborum quod?</p>
         </div>
@@ -33,11 +37,20 @@
     <main>
         <section class="image-gallery">
         <div class="rectangle-container">
-            <img src="C:\Users\nicho\Documents\GitHub\Some_Simple_Project\Static\Assets\Auro_model2.png" alt="Image 1" class="rectangle-image">
-            <img src="C:\Users\nicho\Documents\GitHub\Some_Simple_Project\Static\Assets\Auro_model3.png" alt="Image 2" class="rectangle-image">
-            <img src="C:\Users\nicho\Documents\GitHub\Some_Simple_Project\Static\Assets\Auro_model1.png" alt="Image 3" class="rectangle-image">
+            <img src="{{ url_for('static', filename='Assets/Auro_model2.png')}}" alt="Image 1" class="rectangle-image">
+            <img src="{{ url_for('static', filename='Assets/Auro_model3.png')}}" alt="Image 2" class="rectangle-image">
+            <img src="{{ url_for('static', filename='Assets/Auro_model1.png')}}" alt="Image 3" class="rectangle-image">
+            <img src="{{ url_for('static', filename='Static\Assets\Screenshot 2026-02-07 194721.png')}}" alt="Image 4" class="rectangle-image">
         </div>
     </section>
     </main>
+
+    <footer>
+        <div class = "footer-container">
+            <div class = logo>
+                <img src="{{ url_for('static', filename='Assets/Auro_Logo.png')}}" class="image-small">
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
